@@ -26,12 +26,12 @@ app.get("/", (req, res) => {
 });
 
 // getting route
-app.get("/get", (req, res) => {
+app.get("/book", (req, res) => {
   res.json(books);
 });
 
 // getting book id
-app.get("/get/:id", (req, res) => {
+app.get("/book/:id", (req, res) => {
   const book = books.find((item) => item.id === req.params.id);
   if (book) {
     res.status(200).json(book);
@@ -45,10 +45,10 @@ app.get("/get/:id", (req, res) => {
 //Creating a new book
 app.post("/create", (req, res) => {
   const newBook = {
-    // id: `${books.length + 1}`,
-    id: `${Math.floor(Math.random() * 1000)}`,
-    // title: `Book ${books.length + 1}`,
-    title: `Book ${Math.floor(Math.random() * 1000)}`,
+    id: `${books.length + 1}`,
+    // id: `${Math.floor(Math.random() * 1000)}`,
+    title: `Book ${books.length + 1}`,
+    // title: `Book ${Math.floor(Math.random() * 1000)}`,
     
   };
   books.push(newBook);
