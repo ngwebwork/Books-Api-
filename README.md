@@ -20,6 +20,7 @@ A simple REST API built with Node.js and Express to manage books (CRUD operation
 ```bash
 npm install
 npm start
+nodemon app.js
 ```
 
 Server: [http://localhost:3000]
